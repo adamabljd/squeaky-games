@@ -1,4 +1,48 @@
 import Image from 'next/image';
+import Card from './Card';
+
+const games = [
+    {
+        id: 'miawdoku',
+        name: 'MiawDoku!',
+        image: '/squeaky_games_logo.png',
+        iosLink: 'https://apps.apple.com/app/id1234567890',
+        androidLink: 'https://play.google.com/store/apps/details?id=com.squeaky.miawdoku',
+    },
+    {
+        id: 'catventure',
+        name: 'Catventure Island',
+        image: '/ios_icon.png',
+        iosLink: 'https://apps.apple.com/app/id1234567890',
+
+        androidLink: 'https://play.google.com/store/apps/details?id=com.squeaky.catventure',
+    },
+    {
+        id: 'purrfectmatch',
+        name: 'Purrfect Match',
+        image: '/1_4_bg.png',
+        iosLink: 'https://apps.apple.com/app/id0987654321',
+    },
+    {
+        id: 'miawdoku',
+        name: 'MiawDoku!',
+        image: '/squeaky_games_logo.png',
+        iosLink: 'https://apps.apple.com/app/id1234567890',
+        androidLink: 'https://play.google.com/store/apps/details?id=com.squeaky.miawdoku',
+    },
+    {
+        id: 'catventure',
+        name: 'Catventure Island',
+        image: '/squeaky_games_logo.png',
+        androidLink: 'https://play.google.com/store/apps/details?id=com.squeaky.catventure',
+    },
+    {
+        id: 'purrfectmatch',
+        name: 'Purrfect Match',
+        image: '/squeaky_games_logo.png',
+        iosLink: 'https://apps.apple.com/app/id0987654321',
+    },
+];
 
 const Homepage = () => {
     return (
@@ -25,18 +69,14 @@ const Homepage = () => {
                 </div>
             </div>
 
-
-            <div className="p-4 md:p-6 grid gird-rows gap-4 md:gap-6 md:grid-cols-2">
-                {/* {games.map((game) => (
-          <Card
-            key={game.name}
-            game={game}
-            description={game.description}
-            android={game.android}
-            ios={game.ios}
-          />
-        ))} */}
+            <div className='flex items-center justify-center pt-6'>
+                <div className="grid gap-4 md:gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+                    {games.map((game) => (
+                        <Card key={game.id} game={game} />
+                    ))}
+                </div>
             </div>
+
         </div>
     );
 
