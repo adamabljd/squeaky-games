@@ -8,8 +8,8 @@ const Navbar = () => {
                 <Image
                     src="/squeaky_games_logo_noBg.png"
                     alt="logo"
-                    width={100}
-                    height={100}
+                    width={70}
+                    height={70}
                 />
                 <p className='font-bold text-2xl'>Squeaky Games</p>
             </div>
