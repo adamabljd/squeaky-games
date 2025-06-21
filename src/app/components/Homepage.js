@@ -5,7 +5,7 @@ const games = [
     {
         id: 'miawdoku',
         name: 'MiawDoku!',
-        image: '/squeaky_games_logo.png',
+        image: '/Miawdoku_newLogo.png',
         iosLink: 'https://apps.apple.com/us/app/miawdoku/id6738445722',
         androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.catdoku',
     }
