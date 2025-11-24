@@ -19,7 +19,7 @@ const Footer = () => {
                     <p className="font-semibold">Follow us on:</p>
                     <div className="flex space-x-4">
                         <a href="https://www.instagram.com/squeaky.games/" target="_blank" rel="noopener noreferrer">
-                            <Image src="/instagram_logo.png" alt="Instagram" width={100} height={100} className="w-10 aspect-square"/>
+                            <Image src="/Instagram_logo.png" alt="Instagram" width={100} height={100} className="w-10 aspect-square"/>
                         </a>
                         <a href="https://www.tiktok.com/@squeaky.games" target="_blank" rel="noopener noreferrer">
                             <Image src="/tiktok_logo0.png" alt="TikTok" width={100} height={100} className="w-10 aspect-square" />

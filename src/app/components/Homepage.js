@@ -8,6 +8,13 @@ const games = [
         image: '/Miawdoku_newLogo.png',
         iosLink: 'https://apps.apple.com/us/app/miawdoku/id6738445722',
         androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.catdoku',
+    },
+    {
+        id: 'kitty Mahjong',
+        name: 'Kitty Mahjong',
+        image: '/logo_mahjong.png',
+        iosLink: 'https://apps.apple.com/fr/app/cat-mahjong-tile-match-defense/id6755239014?l=en-GB',
+        androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.KittyMahjong&pcampaignid=web_share',
     }
 ];
 
