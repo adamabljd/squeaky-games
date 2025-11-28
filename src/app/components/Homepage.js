@@ -49,7 +49,7 @@ const Homepage = () => {
 
             <h1 className='text-black text-center font-extrabold text-3xl p-4 mt-2'>OUR GAMES</h1>
 
-            <div className='flex items-center justify-center pt-6 mb-6'>
+            <div className='flex flex-col md:flex-row-2 items-center justify-center pt-6 mb-6'>
                 <div className="grid gap-4 md:gap-6 ">
                     {games.map((game) => (
                         <Card key={game.id} game={game} />
