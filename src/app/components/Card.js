@@ -27,6 +27,15 @@ const Card = ({ game }) => {
         </div>
 
         <div className="flex space-x-3">
+          {game.webLink && (
+            <button
+              type="button"
+              className="text-xs font-semibold bg-white text-red-500 px-2 py-1 rounded-md"
+              onClick={(e) => handleIconClick(e, game.webLink)}
+            >
+              Play
+            </button>
+          )}
           {game.iosLink && (
             <Image
               src="/ios_icon.png"

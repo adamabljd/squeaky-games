@@ -3,11 +3,10 @@ import Card from './Card';
 
 const games = [
     {
-        id: 'miawdoku',
-        name: 'MiawDoku!',
-        image: '/Miawdoku_newLogo.png',
-        iosLink: 'https://apps.apple.com/us/app/miawdoku/id6738445722',
-        androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.catdoku',
+        id: 'zombies-rush',
+        name: 'Zombies Rush',
+        image: '/zombie_rush_logo.png',
+        webLink: 'https://squeakygamesinc.itch.io/zombie-rush',
     },
     {
         id: 'kitty Mahjong',
@@ -15,6 +14,13 @@ const games = [
         image: '/logo_mahjong.png',
         iosLink: 'https://apps.apple.com/fr/app/cat-mahjong-tile-match-defense/id6755239014?l=en-GB',
         androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.KittyMahjong&pcampaignid=web_share',
+    },
+    {
+        id: 'miawdoku',
+        name: 'MiawDoku!',
+        image: '/Miawdoku_newLogo.png',
+        iosLink: 'https://apps.apple.com/us/app/miawdoku/id6738445722',
+        androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.catdoku',
     }
 ];
 
@@ -50,7 +56,7 @@ const Homepage = () => {
             <h1 className='text-black text-center font-extrabold text-3xl p-4 mt-2'>OUR GAMES</h1>
 
             <div className='flex flex-col md:flex-row-2 items-center justify-center pt-6 mb-6'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
                     {games.map((game) => (
                         <Card key={game.id} game={game} />
                     ))}
