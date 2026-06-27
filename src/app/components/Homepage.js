@@ -4,8 +4,9 @@ import Card from './Card';
 const games = [
     {
         id: 'zombies-rush',
-        name: 'Zombies Rush',
+        name: 'Zombie Craze Survival: 2d Game',
         image: '/zombie_rush_logo.png',
+        iosLink: 'https://apps.apple.com/fr/app/zombie-craze-survival-2d-game/id6761763726?l=en-GB',
         webLink: 'https://squeakygamesinc.itch.io/zombie-rush',
     },
     {
