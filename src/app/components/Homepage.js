@@ -10,6 +10,12 @@ const games = [
         webLink: 'https://squeakygamesinc.itch.io/zombie-rush',
     },
     {
+        id: 'uphill-grocery-cook-off',
+        name: 'UpHill Grocery Cook Off !',
+        image: '/uphill_grocery_cook_off_logo.png',
+        webLink: 'https://squeakygamesinc.itch.io/uphill-grocery-cook-off',
+    },
+    {
         id: 'kitty Mahjong',
         name: 'Kitty Mahjong',
         image: '/logo_mahjong.png',
