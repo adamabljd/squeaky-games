@@ -4,28 +4,37 @@ import Card from './Card';
 const games = [
     {
         id: 'zombies-rush',
-        name: 'Zombie Craze Survival: 2d Game',
-        image: '/zombie_rush_logo.png',
+        name: 'Zombie Craze Survival',
+        genre: 'Survival / Action',
+        accent: '#98ae75',
+        image: '/zombie_craze_logo.png',
         iosLink: 'https://apps.apple.com/fr/app/zombie-craze-survival-2d-game/id6761763726?l=en-GB',
         webLink: 'https://squeakygamesinc.itch.io/zombie-rush',
     },
     {
         id: 'uphill-grocery-cook-off',
-        name: 'UpHill Grocery Cook Off !',
-        image: '/uphill_grocery_cook_off_logo.png',
+        name: 'Uphill Grocery: Cooking Game',
+        genre: 'Sim / Party',
+        accent: '#e77960',
+        image: '/uphill_logo.png',
+        iosLink: 'https://apps.apple.com/fr/app/uphill-grocery-cooking-game/id6803160499?l=en-GB',
         webLink: 'https://squeakygamesinc.itch.io/uphill-grocery-cook-off',
     },
     {
         id: 'kitty Mahjong',
         name: 'Kitty Mahjong',
-        image: '/logo_mahjong.png',
+        genre: 'Puzzle / Casual',
+        accent: '#dfa2ac',
+        image: '/Kitty_mahjong_logo.png',
         iosLink: 'https://apps.apple.com/fr/app/cat-mahjong-tile-match-defense/id6755239014?l=en-GB',
         androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.KittyMahjong&pcampaignid=web_share',
     },
     {
         id: 'miawdoku',
         name: 'MiawDoku!',
-        image: '/Miawdoku_newLogo.png',
+        genre: 'Brain / Puzzle',
+        accent: '#75a5aa',
+        image: '/miawdoku_logo.png',
         iosLink: 'https://apps.apple.com/us/app/miawdoku/id6738445722',
         androidLink: 'https://play.google.com/store/apps/details?id=com.SqueakyGames.catdoku',
     }
@@ -34,41 +43,40 @@ const games = [
 const Homepage = () => {
     return (
         <div>
-            <div className="relative w-full">
-                <Image
-                    src="/homepageBg.jpg?=v2"
-                    alt="Hero Background"
-                    width={1920}
-                    height={1080}
-                    className="w-full h-auto"
-                    priority
-                />
-
-                <div className="absolute inset-0 bg-black opacity-50 z-0" />
-
-                <div className="absolute inset-0 flex flex-col z-10 md:flex-row items-center justify-end h-full text-center md:items-end md:justify-center pb-4 md:pb-8 space-y-4 md:space-y-0 md:space-x-4">
-                    {/* <Image
-                        src="/squeaky_games_logo_noBg.png"
-                        alt="logo"
-                        width={100}
-                        height={100}
-                    /> */}
-
-                    <p className="text-white text-md md:text-2xl break-words whitespace-normal px-4 md:px-0 max-w-xs md:max-w-xl">
-                        Find the cutest games here on Squeaky's page!
-                    </p>
+            <section className="hero" aria-labelledby="hero-title">
+                <div className="hero-copy">
+                <h1 id="hero-title" className="hero-title">
+                    <span>Press play.</span>
+                    <span>Get hooked.</span>
+                </h1>
+                <div className="hero-actions">
+                    <a className="explore-button" href="#games">Explore the games</a>
+                    <p className="studio-label">Independent game studio · Toulouse, France</p>
                 </div>
-            </div>
+                </div>
+                <div className="hero-artwork">
+                    <Image
+                        src="/squeaky-icon.png"
+                        alt="Squeaky the cat wearing sunglasses, headphones, and a red bandana"
+                        width={3072}
+                        height={3072}
+                        sizes="(max-width: 700px) 130px, 340px"
+                        className="hero-cat"
+                        priority
+                    />
+                </div>
+            </section>
 
-            <h1 className='text-black text-center font-extrabold text-3xl p-4 mt-2'>OUR GAMES</h1>
+            <section id="games" className="games-section" aria-labelledby="games-title">
+            <h2 id="games-title" className="games-title">The lineup</h2>
 
-            <div className='flex flex-col md:flex-row-2 items-center justify-center pt-6 mb-6'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className="games-grid">
+
                     {games.map((game) => (
                         <Card key={game.id} game={game} />
                     ))}
-                </div>
             </div>
+            </section>
 
         </div>
     );

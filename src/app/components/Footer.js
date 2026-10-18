@@ -1,70 +1,55 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Footer = () => {
-    return (
-        <footer className="bg-[#780000] text-white px-6 py-10">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-                {/* Left Section */}
-                <div className="flex flex-col items-center md:items-start gap-4 w-full md:w-1/2">
-                    {/* Logo */}
-                    <div className="flex items-center space-x-2">
-                        <Image src="/squeaky_games_logo_noBg.png" alt="Logo" width={100} height={100} className='w-16 aspect-square'/>
-                        <span className="font-bold text-xl">SQUEAKY GAMES</span>
-                    </div>
+const socialLinks = [
+  ['Instagram', '/Instagram_logo.png', 'https://www.instagram.com/squeaky.games/'],
+  ['TikTok', '/tiktok_logo0.png', 'https://www.tiktok.com/@squeaky.games'],
+  ['X / Twitter', '/x_logo.png', 'https://twitter.com/squeakygamesinc/'],
+];
+const storeLinks = [
+  ['App Store', '/app_store_bt.svg', 'https://apps.apple.com/us/developer/adam-el-sayed-abou-el-joud/id1780876046'],
+  ['Google Play', '/google_play_bt.svg', 'https://play.google.com/store/apps/developer?id=Squeaky+Games'],
+];
 
-                    {/* Social */}
-                    <p className="font-semibold">Follow us on:</p>
-                    <div className="flex space-x-4">
-                        <a href="https://www.instagram.com/squeaky.games/" target="_blank" rel="noopener noreferrer">
-                            <Image src="/Instagram_logo.png" alt="Instagram" width={100} height={100} className="w-10 aspect-square"/>
-                        </a>
-                        <a href="https://www.tiktok.com/@squeaky.games" target="_blank" rel="noopener noreferrer">
-                            <Image src="/tiktok_logo0.png" alt="TikTok" width={100} height={100} className="w-10 aspect-square" />
-                        </a>
-                        <a href="https://twitter.com/squeakygamesinc/" target="_blank" rel="noopener noreferrer">
-                            <Image src="/x_logo.png?v=2" alt="x" width={100} height={100} className="w-10 aspect-square" />
-                        </a>
-                    </div>
-
-                    <div className="border-t border-dashed border-gray-400 w-full max-w-xs my-2" />
-
-                    {/* App Store Buttons */}
-                    <div className="flex space-x-4">
-                        <a href="https://apps.apple.com/us/developer/adam-el-sayed-abou-el-joud/id1780876046" target="_blank" rel="noopener noreferrer">
-                            <Image src="/app_store_bt.svg" alt="App Store" width={100} height={100} className="h-10 w-auto object-contain" />
-                        </a>
-                        <a href="https://play.google.com/store/apps/developer?id=Squeaky+Games" target="_blank" rel="noopener noreferrer">
-                            <Image src="/google_play_bt.svg" alt="Google Play" width={100} height={100} className="h-10 w-auto object-contain"/>
-                        </a>
-                    </div>
-                </div>
-
-                {/* Right Section */}
-                <div className="w-full md:w-1/2 text-center md:text-left">
-                    <h3 className="uppercase font-bold text-white mb-2 pl-2">Contact Us</h3>
-
-                    <div className="flex items-center gap-2 mt-4 justify-center md:justify-start">
-                        <Image src="/ic_adress.png?v=2" alt="Address" width={100} height={100} className='w-8 aspect-square' />
-                        <div className="text-gray-300">
-                            <p className="font-semibold text-sm">Address</p>
-                            <p className="text-sm">Toulouse, France (31000)</p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 mt-4 justify-center md:justify-start">
-                        <Image src="/ic_phone.png" alt="Email" width={100} height={100} className='w-8 aspect-square'/>
-                        <div className="text-gray-300">
-                            <p className="font-semibold text-sm">Contact</p>
-                            <p className="text-sm">squeakygamesinc@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-};
-
-export default Footer;
+export default function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-inner">
+      <div className="footer-main">
+        <div className="footer-brand">
+          <Link href="/" className="footer-brand-lockup">
+            <Image src="/squeaky-icon.png" alt="" width={96} height={96} />
+            <span className="site-wordmark">Squeaky<br />Games</span>
+          </Link>
+          <span>Toulouse, France</span>
+        </div>
+        <div className="footer-column">
+          <h2>Say hello</h2>
+          <a className="footer-email" href="mailto:squeakygamesinc@gmail.com">squeakygamesinc@gmail.com</a>
+          <div className="footer-socials">
+            {socialLinks.map(([label, icon, url]) => (
+              <a key={label} href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                <Image src={icon} alt={label} width={32} height={32} />
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="footer-column">
+          <h2>Find your next game</h2>
+          <div className="footer-stores">
+            {storeLinks.map(([label, icon, url]) => (
+              <a key={label} href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                <Image src={icon} alt={`Download on ${label}`} width={140} height={44} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <small>© {new Date().getFullYear()} Squeaky Games</small>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+      </div>
+    </footer>
+  );
+}

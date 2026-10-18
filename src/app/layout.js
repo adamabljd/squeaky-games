@@ -1,5 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+const anton = Anton({ variable: "--font-display", weight: "400", subsets: ["latin"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +27,7 @@ export default function RootLayout({ children }) {
           content="bXeT48VPTSm_1dfOK9jRwCKqIGTTd4Is2Tc-i0goEts" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${anton.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

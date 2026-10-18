@@ -1,20 +1,11 @@
-import Image from 'next/image';
+import Link from 'next/link';
 
-const Navbar = () => {
+export default function Navbar() {
     return (
-        <nav className="p-4 flex items-center justify-center max-h-full bg-[#780000]">
-
-            <div className='flex items-center space-x-2'>
-                <Image
-                    src="/squeaky_games_logo_noBg.png"
-                    alt="logo"
-                    width={70}
-                    height={70}
-                />
-                <p className='font-bold text-2xl'>Squeaky Games</p>
-            </div>
-        </nav>
-    )
+        <header className="site-header">
+            <nav aria-label="Main navigation">
+                <Link href="/" className="site-wordmark">Squeaky Games</Link>
+            </nav>
+        </header>
+    );
 }
-
-export default Navbar;
